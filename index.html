@@ -14,13 +14,9 @@
             <input type="checkbox">Clear all checked</input>
         </div>
     </header>
-    <input type="text" value="Fill it here" name="todoInput">
-    <button onclick="addToDoToList(document.getElementById('todoInput'))">Add!</button>
-    <ul class="list">
-        <li class="item">
-
-        </li>
-    </ul>
+    <input type="text" value="Fill it here" id="todoInput">
+    <button onclick="addToList(document.getElementById('todoInput'))">Add!</button>
+    <ul class="list" id="list"></ul>
 </body>
 
 </html>
