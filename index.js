@@ -12,13 +12,13 @@ function log(text) {
 
 function addToList(todoInfo) {
     items.set(items.size + 1, todoInfo.value)
-    checkItemListCount()
-    readItemList()
-    pushToItemList()
+    readItems()
+    pushToItemList(checkItemListCount())
 }
 
 function checkItemListCount() {
-    return log('Items size: ' + items.size)
+    log('Items size: ' + items.size)
+    return items.size
 }
 
 function readItems() {
@@ -32,15 +32,27 @@ function readItems() {
     return itemList
 }
 
-function pushToItemList() {
-    var item = document.createElement('li')
+function pushToItemList(itemPosition) {
+    let item = document.createElement('li')
 
-    item.appendChild(document.createTextNode(items.get(items.size)))
+    item.appendChild(document.createTextNode(items.get(itemPosition)))
     this.list.appendChild(item)
 
     return list
 }
 
+function buildList() {
+    items.Array.forEach(item => {
+        pushToItemList(item)
+    });
+}
+
+function clearItemList() {
+    list.innerHTML = ""
+}
+
 function removeFromList(identifier) {
     items.delete(identifier)
+    clearItemList()
+    buildList()
 }

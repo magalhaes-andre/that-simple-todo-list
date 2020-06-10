@@ -1,7 +1,37 @@
-.header-checkbox {
-    background-color: aqua;
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    margin-left: 25%;
+    width: 50%;
+    text-align: center;
+    border-style: solid;
+    border-color: yellow;
 }
 
 header {
-    background-color: red;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    background-color: brown;
+}
+
+header p {
+    font-style: italic;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.todo {
+    padding-top: 20px;
+}
+
+.todo input {
+    width: 50%;
+}
+
+.todo li {
+    list-style: none;
+    text-align: left;
 }

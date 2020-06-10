@@ -7,16 +7,20 @@
 </head>
 
 <body>
-    <header>
-        <h2>Your To-Do List</h2>
-        <p>Warm your subconciousness by filling little checkboxes to every minor task of your day!</p>
-        <div class="header-checkbox">
-            <input type="checkbox">Clear all checked</input>
+    <main>
+        <header>
+            <h2>Your To-Do List</h2>
+            <p>Warm your subconciousness by filling little checkboxes to every minor task of your day!</p>
+            <div class="header-checkbox">
+                <input type="checkbox" onclick="removeFromList(1)">Clear all checked</input>
+            </div>
+        </header>
+        <div class="todo">
+            <input type="text" value="Fill it here" id="todoInput"></br>
+            <button onclick="addToList(document.getElementById('todoInput'))">Add!</button>
+            <ul class="list" id="list"></ul>
         </div>
-    </header>
-    <input type="text" value="Fill it here" id="todoInput">
-    <button onclick="addToList(document.getElementById('todoInput'))">Add!</button>
-    <ul class="list" id="list"></ul>
+    </main>
 </body>
 
 </html>
